@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body, html, #Particles{
+            margin: 0;
+            width:100%;
+            height: 100%;
+        }
+        #Particles{
+            overflow: hidden;
+        }
+
+        #Particles canvas{
+            display:block;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <diV id="Particles">
+
+        <canvas></canvas>
+
+    </diV>
+    <script
+    type="module">
+//import the particles using the three js hyperlinks
+import {particlesCursor} from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+const pc = particlesCursor({
+
+    el: document.getElementById('Particles'),
+    gpgpuSize: 512,
+    colors: [0x047180, 0xD4AE37],
+    color: 0xff0000,
+    coordScale: 0.5,
+    noiseIntensity: 0.005,
+    noiseTimeCoef: 0.0001,
+    pointSize:2,
+    PointDecay: 0.0025,
+    sleepRadiusX: 250,
+    sleepRadiusY: 250,
+    sleepTimeCoefX:0.001,
+    sleepTimeCoefY:0.002,
+})
+    </script>
+</body>
+</html>
